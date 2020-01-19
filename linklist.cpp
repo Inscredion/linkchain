@@ -99,9 +99,9 @@ void DeleteNode(Node* node, int index) {
     for (int i = 1;i < index - 1;i++) {
         p = p->next;
     }
-    printf("%d     ", p->val);
+    Node* temp = p->next;
     p->next = p->next->next;
-    //free(p->next);
+    free(temp);
 }
 
 void AddNode(Node* node, int index, int newVal) {
